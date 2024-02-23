@@ -115,3 +115,28 @@ foreach(double maximum in numbers)
 }
 
 Console.Write(max - min);
+
+// Четвертое задание
+
+int num = 61651;
+int res = num;
+int iter = 1;
+int size = 0;
+
+while (res >= 1)
+{
+    res /= 10;
+    iter *= 10;
+    size++;
+}
+
+int num1 = num;
+while (iter > 1)
+{
+    int[] array = new int[size];
+    num1 = num / (iter / 10);
+    iter /= 10;
+    array[array.Length - size] = num1 % 10;
+    Console.Write(array[array.Length - size] + " ");
+    size--;
+}
