@@ -67,14 +67,14 @@ else
 // Домашнее задание
 
 //  Первое задание
-int array = new int[] {1, 5, 10, 20, 30, 40, 99, 4, 90, 3};
+int[] array = new int[] {1, 5, 10, 20, 30, 40, 99, 4, 90, 3};
 int count = 0;
 int minRange = 10;
 int maxRange = 90;
 
 for(int i = 0; i < array.Length; i++)
 {
-    if(array[i] >= minRange && array <= maxRange)
+    if(array[i] >= minRange && array[i] <= maxRange)
     {
         count++;
     }         
@@ -82,5 +82,36 @@ for(int i = 0; i < array.Length; i++)
 Console.Write(count);
 
 // Второе задание
+int[] array = new int[] {1, 5, 10, 20, 30, 40, 99, 4, 90, 3};
+int count = 0;
+
+foreach(int even in array)
+{
+    if(even%2==0)
+    {
+        count++;
+    }
+}
+Console.Write(count);
 
 // Третье задание
+int[] array = {0.25, 5.4, 1.3, 2.1, 3.8, 5.2, 3.01};
+double min = numbers[0];
+double max = numbers[0];
+foreach(double minimum in numbers)
+{
+    if(minimum < min)
+    {
+        min = minimum;
+    }
+}
+
+foreach(double maximum in numbers)
+{
+    if(maximum > max)
+    {
+        max = maximum;
+    }
+}
+
+Console.Write(max - min);
