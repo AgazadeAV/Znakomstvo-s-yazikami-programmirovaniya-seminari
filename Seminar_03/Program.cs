@@ -1,120 +1,120 @@
-// // Семинарское занятие
+// Семинарское занятие
 
-// // Первое задание
+// Первое задание
 
-// int num = 8;
-// int[] array = new int[] { 1, 3, 4, 19, 8 };
+int num = 8;
+int[] array = new int[] { 1, 3, 4, 19, 8 };
 
-// bool flag = false;
+bool flag = false;
 
-// foreach (int item in array)
-// {
-//     if (item == num)
-//     {
-//         flag = true;
-//     }
-// }
-// if (flag)
-// {
-//     Console.Write("Да");
-// }
-// else
-// {
-//     Console.Write("Нет");
-// }
+foreach (int item in array)
+{
+    if (item == num)
+    {
+        flag = true;
+    }
+}
+if (flag)
+{
+    Console.Write("Да");
+}
+else
+{
+    Console.Write("Нет");
+}
 
-// // Второе задание
+// Второе задание
 
-// int[] array = new int[] { -5, 6, 7, -3, 0 };
-// for (int i = 0; i < array.Length; i++)
-// {
-//     array[i] = array[i] * -1;
-//     Console.Write(array[i] + " ");
-// }
+int[] array = new int[] { -5, 6, 7, -3, 0 };
+for (int i = 0; i < array.Length; i++)
+{
+    array[i] = array[i] * -1;
+    Console.Write(array[i] + " ");
+}
 
-// // Третье задание (вариант преподователя)
+// Третье задание (вариант преподователя)
 
-// int [] array = new int [] {1,3,2,4,3,4,8};
-// int [] res = new int [array.Length/2];
-// for(int i=0;i<array.Length/2; i++){
-//     res[i] = array[i] * array[array.Length-1-i];
-//     Console.Write(res[i]+" ");
-// }
+int [] array = new int [] {1,3,2,4,3,4,8};
+int [] res = new int [array.Length/2];
+for(int i=0;i<array.Length/2; i++){
+    res[i] = array[i] * array[array.Length-1-i];
+    Console.Write(res[i]+" ");
+}
 
-// // Третье задание (мой вариант)
+// Третье задание (мой вариант)
 
-// int[] array = new int[] { -5, 6, 7, -3, 0, 6 };
+int[] array = new int[] { -5, 6, 7, -3, 0, 6 };
 
-// if (array.Length % 2 == 0)
-// {
-//     int[] newArray = new int[array.Length / 2];
-//     for (int i = 0; i < array.Length / 2; i++)
-//     {
-//         newArray[i] = array[i] * array[array.Length - 1 - i];
-//         Console.Write(newArray[i] + " ");
-//     }
-// }
-// else
-// {
-//     int[] newArray = new int[array.Length / 2 + 1];
-//     for (int i = 0; i < array.Length / 2; i++)
-//     {
-//         newArray[i] = array[i] * array[array.Length - 1 - i];
-//         Console.Write(newArray[i] + " ");
-//     }
-// }
+if (array.Length % 2 == 0)
+{
+    int[] newArray = new int[array.Length / 2];
+    for (int i = 0; i < array.Length / 2; i++)
+    {
+        newArray[i] = array[i] * array[array.Length - 1 - i];
+        Console.Write(newArray[i] + " ");
+    }
+}
+else
+{
+    int[] newArray = new int[array.Length / 2 + 1];
+    for (int i = 0; i < array.Length / 2; i++)
+    {
+        newArray[i] = array[i] * array[array.Length - 1 - i];
+        Console.Write(newArray[i] + " ");
+    }
+}
 
-// // Домашнее задание
+// Домашнее задание
 
-// //  Первое задание
-// int[] array = new int[] {1, 5, 10, 20, 30, 40, 99, 4, 90, 3};
-// int count = 0;
-// int minRange = 10;
-// int maxRange = 90;
+//  Первое задание
+int[] array = new int[] {1, 5, 10, 20, 30, 40, 99, 4, 90, 3};
+int count = 0;
+int minRange = 10;
+int maxRange = 90;
 
-// for(int i = 0; i < array.Length; i++)
-// {
-//     if(array[i] >= minRange && array[i] <= maxRange)
-//     {
-//         count++;
-//     }         
-// }
-// Console.Write(count);
+for(int i = 0; i < array.Length; i++)
+{
+    if(array[i] >= minRange && array[i] <= maxRange)
+    {
+        count++;
+    }         
+}
+Console.Write(count);
 
-// // Второе задание
-// int[] array = new int[] {1, 5, 10, 20, 30, 40, 99, 4, 90, 3};
-// int count = 0;
+// Второе задание
+int[] array = new int[] {1, 5, 10, 20, 30, 40, 99, 4, 90, 3};
+int count = 0;
 
-// foreach(int even in array)
-// {
-//     if(even%2==0)
-//     {
-//         count++;
-//     }
-// }
-// Console.Write(count);
+foreach(int even in array)
+{
+    if(even%2==0)
+    {
+        count++;
+    }
+}
+Console.Write(count);
 
-// // Третье задание
-// int[] array = {0.25, 5.4, 1.3, 2.1, 3.8, 5.2, 3.01};
-// double min = numbers[0];
-// double max = numbers[0];
-// foreach(double minimum in numbers)
-// {
-//     if(minimum < min)
-//     {
-//         min = minimum;
-//     }
-// }
+// Третье задание
+int[] array = {0.25, 5.4, 1.3, 2.1, 3.8, 5.2, 3.01};
+double min = numbers[0];
+double max = numbers[0];
+foreach(double minimum in numbers)
+{
+    if(minimum < min)
+    {
+        min = minimum;
+    }
+}
 
-// foreach(double maximum in numbers)
-// {
-//     if(maximum > max)
-//     {
-//         max = maximum;
-//     }
-// }
+foreach(double maximum in numbers)
+{
+    if(maximum > max)
+    {
+        max = maximum;
+    }
+}
 
-// Console.Write(max - min);
+Console.Write(max - min);
 
 // Четвертое задание
 
