@@ -25,7 +25,7 @@
 // //         {
 // //             count++;
 // //         }
-    
+
 // //     }
 // //     return count;
 // // }
@@ -113,3 +113,57 @@
 // Console.WriteLine($" => {count}");
 // // int count = CountOfOdd(array);
 // // Console.WriteLine($"\nCount of odd numbers in array is {count}");
+
+// Доашнее Задание
+
+// Первое Задание
+
+int GetSumOfDigits(int num)
+{
+    int sum = 0;
+    while (num > 0)
+    {
+        sum += num % 10;
+        num /= 10;
+    }
+    return sum;
+}
+
+bool IsInputLetter(string letter)
+{
+    bool flag = false;
+    foreach (char e in letter)
+    {
+        if (char.IsAsciiLetter(e) == true)
+        {
+            flag = true;
+        }
+    }
+    return flag;
+}
+
+bool IsQLetter()
+
+string input = Console.ReadLine();
+
+while (true)
+{
+    if (IsInputLetter(input) == true)
+    {
+        if (input == "q")
+        {
+            Console.WriteLine($"Была введена буква {input}.\nПрограмма завершает работу.");
+            break;
+        }
+    }
+    else if (GetSumOfDigits(Convert.ToInt32(input)) % 2 == 0)
+    {
+        Console.WriteLine($"Было введено число {input}, сумма цифр которого чётная.\nПрограмма завершает работу.");
+        break;
+    }
+    else
+    {
+        Console.WriteLine($"Не было команды завершать работу.\nПрограмма продолжает работу.");
+        input = Console.ReadLine();
+    }
+}
