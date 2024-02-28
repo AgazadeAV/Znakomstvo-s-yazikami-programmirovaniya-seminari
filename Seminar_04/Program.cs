@@ -142,8 +142,6 @@ bool IsInputLetter(string letter)
     return flag;
 }
 
-bool IsQLetter()
-
 string input = Console.ReadLine();
 
 while (true)
@@ -155,15 +153,23 @@ while (true)
             Console.WriteLine($"Была введена буква {input}.\nПрограмма завершает работу.");
             break;
         }
+        else
+        {
+            Console.WriteLine($"Не было команды завершать работу.\nПрограмма продолжает работу.");
+            input = Console.ReadLine();
+        }
     }
-    else if (GetSumOfDigits(Convert.ToInt32(input)) % 2 == 0)
-    {
-        Console.WriteLine($"Было введено число {input}, сумма цифр которого чётная.\nПрограмма завершает работу.");
-        break;
-    }
-    else
-    {
-        Console.WriteLine($"Не было команды завершать работу.\nПрограмма продолжает работу.");
-        input = Console.ReadLine();
+    else 
+    {    
+        if (GetSumOfDigits(Convert.ToInt32(input)) % 2 == 0)
+        {
+            Console.WriteLine($"Было введено число {input}, сумма цифр которого чётная.\nПрограмма завершает работу.");
+            break;
+        }
+        else
+        {
+            Console.WriteLine($"Не было команды завершать работу.\nПрограмма продолжает работу.");
+            input = Console.ReadLine();
+        }
     }
 }
