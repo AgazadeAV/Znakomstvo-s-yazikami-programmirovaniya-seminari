@@ -114,62 +114,141 @@
 // // int count = CountOfOdd(array);
 // // Console.WriteLine($"\nCount of odd numbers in array is {count}");
 
-// Доашнее Задание
+// // Доашнее Задание
 
-// Первое Задание
+// // Первое Задание
 
-int GetSumOfDigits(int num)
-{
-    int sum = 0;
-    while (num > 0)
-    {
-        sum += num % 10;
-        num /= 10;
-    }
-    return sum;
-}
+// int GetSumOfDigits(int num)
+// {
+//     int sum = 0;
+//     while (num > 0)
+//     {
+//         sum += num % 10;
+//         num /= 10;
+//     }
+//     return sum;
+// }
 
-bool IsInputLetter(string letter)
-{
-    bool flag = false;
-    foreach (char e in letter)
-    {
-        if (char.IsAsciiLetter(e) == true)
-        {
-            flag = true;
-        }
-    }
-    return flag;
-}
+// bool IsInputDigit(string number)
+// {
+//     bool flag = false;
+//     foreach (char e in number)
+//     {
+//         if (char.IsAsciiDigit(e) == true)
+//         {
+//             flag = true;
+//         }
+//     }
+//     return flag;
+// }
 
-string input = Console.ReadLine();
+// Console.WriteLine("Введите целое число для проверки. Чтобы выйти, нажмите 'q'.");
+// while (true)
+// {
+//     string input = Console.ReadLine();
+//     if (input == "q")
+//     {
+//         Console.WriteLine($"Была введена буква {input}.\nПрограмма завершает работу.");
+//         break;
+//     }
+//     else if (IsInputDigit(input))
+//     {
+//         int sumOfDigits = GetSumOfDigits(Convert.ToInt32(input));
+//         if (sumOfDigits % 2 == 0)
+//         {
+//             Console.WriteLine($"Было введено число {input}, сумма цифр которого чётная.\nПрограмма завершает работу.");
+//             break;
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine($"Не было команды завершать работу.\nПрограмма продолжает работу.");
+//     }
+// }
 
-while (true)
-{
-    if (IsInputLetter(input) == true)
-    {
-        if (input == "q")
-        {
-            Console.WriteLine($"Была введена буква {input}.\nПрограмма завершает работу.");
-            break;
-        }
-        else
-        {
-            Console.WriteLine($"Не было команды завершать работу.\nПрограмма продолжает работу.");
-            input = Console.ReadLine();
-        }
-    }
-    else 
-    {    
-        if (GetSumOfDigits(Convert.ToInt32(input)) % 2 == 0)
-        {
-            Console.WriteLine($"Было введено число {input}, сумма цифр которого чётная.\nПрограмма завершает работу.");
-            break;
-        }
-        else
-        {
-            Console.WriteLine($"Не было команды завершать работу.\nПрограмма продолжает работу.");
-            input = Console.ReadLine();
-        }
-    }
-}
+// // Второе Задание
+
+// int[] CreateRandomArray(int size)
+// {
+//     Random rnd = new Random();
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = rnd.Next(100, 1000);
+//     }
+//     return array;
+// }
+
+// int CountOfEvenElements(int[] arr)
+// {
+//     int count = 0;
+//     foreach(int item in arr)
+//     {
+//         if(item%2 == 0)
+//         {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     foreach(int item in array)
+//     {
+//         Console.Write($"{item} ");
+//     }
+//     Console.WriteLine();
+// }
+
+
+// Console.WriteLine("Введите размер массива:");
+// int length = Convert.ToInt32(Console.ReadLine());
+// int[] array = CreateRandomArray(length);
+// int count = CountOfEvenElements(array);
+// PrintArray(array); //для проверки массива
+// Console.WriteLine(count);
+
+// // Третье задание
+
+// int[] CreateRandomArray(int size)
+// {
+//     Random rnd = new Random();
+//     int[] arr = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         arr[i] = rnd.Next(1, 100);
+//     }
+//     return arr;
+// }
+
+// void PrintArray(int[] arr)
+// {
+//     foreach(int item in arr)
+//     {
+//         Console.Write($"{item} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int [] GetInvertedArray(int[] arr)
+// {
+//     for(int i = 0; i < arr.Length / 2; i++)
+//     {
+//         int k = arr[i];
+//         arr[i] = arr[arr.Length - 1 - i];
+//         arr[arr.Length - 1 - i] = k;
+
+//     }
+//     return arr;
+// }
+
+// Console.WriteLine("Введите размер массива:");
+// int length = Convert.ToInt32(Console.ReadLine());
+// int[] array = CreateRandomArray(length);
+// Console.WriteLine("Изначальный массив:");
+// PrintArray(array);
+// int[] invertedArray = GetInvertedArray(array);
+// Console.WriteLine("Массив после преобразования:");
+// PrintArray(invertedArray);
+
