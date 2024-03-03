@@ -145,7 +145,7 @@ bool IsInputDigit(string number)
 Console.WriteLine("Введите целое число для проверки. Чтобы выйти, нажмите 'q'.");
 while (true)
 {
-    string input = Console.ReadLine();
+    string input = Console.ReadLine()!;
     if (input == "q")
     {
         Console.WriteLine($"Была введена буква {input}.\nПрограмма завершает работу.");
