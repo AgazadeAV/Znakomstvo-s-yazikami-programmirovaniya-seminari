@@ -2,7 +2,7 @@
 
 // Первое задание
 int num1 = 654;
-int result = (num1 / 100) * 10 + (num1 % 10);
+int result = (num1 / 100)! * 10 + (num1 % 10);
 Console.WriteLine(result);
 int first = num1 / 100;
 int second = num1 % 10;
@@ -12,12 +12,12 @@ Console.Write("The num without second digit is " + first + second);
 int num2 = 483;
 int firstDigit = num2 / 100;
 int thirdDigit = num2 % 10;
-int secondDigit = ((num2 - (first * 100)) - thirdDigit) / 10;
-int result = 1;
+int secondDigit = ((num2 - (firstDigit * 100))! - thirdDigit) / 10;
+int result1 = 1;
 
 for (int i = 1; i <= thirdDigit; i++)
 {
-    result *= secondDigit;
+    result1 *= secondDigit;
 }
 Console.WriteLine(result);
 
@@ -98,12 +98,12 @@ else if (x == 0)
 
 // Третье задание
 int number2 = 99;
-int first = number2 / 10;
-int second = number2 % 10;
-int max = first;
-if (second > first)
+int first1 = number2 / 10;
+int second1 = number2 % 10;
+int max = first1;
+if (second1 > first1)
 {
-    max = second;
+    max = second1;
 }
 Console.WriteLine(max);
 
@@ -118,7 +118,7 @@ while (number3 >= 1)
 // Четвертое задание (2-ой вариант)
 int n = 123456789;
 int res = n;
-int iter = 0.1;
+int iter = 1;
 
 while (res >= 1)
 {
@@ -126,9 +126,10 @@ while (res >= 1)
     iter *= 10;
 }
 
+
 while (iter > 1)
 {
-    n /= iter;
+    int aRes = n / (iter / 10);
     iter /= 10;
     if (iter / 10 >= 1)
     {
