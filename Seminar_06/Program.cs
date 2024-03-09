@@ -242,11 +242,11 @@ Console.Clear();
 // }
 
 
-// // Console.WriteLine("Введите латинские буквы в разных регистрах:");
-// // string letters = Console.ReadLine()!;
-// // Console.WriteLine(letters);
-// // Console.WriteLine("Преобразованная строка:");
-// // Console.WriteLine(FromArrayToString(ChangeFromBigToSmall(FromStringToArray(letters))));
+// Console.WriteLine("Введите латинские буквы в разных регистрах:");
+// string letters = Console.ReadLine()!;
+// Console.WriteLine(letters);
+// Console.WriteLine("Преобразованная строка:");
+// Console.WriteLine(FromArrayToString(ChangeFromBigToSmall(FromStringToArray(letters))));
 
 // char[] FromStringToArray(string input)
 // {
@@ -271,6 +271,33 @@ Console.Clear();
 //     return flag;
 // }
 
+// char[] ChangeFromBigToSmall(char[] array)
+// {
+//     string small = "abcdefghijklmnopqrstuvwxyz";
+//     string big = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         bool flag = false;
+//         int count = 0;
+//         foreach(char item in big)
+//         {
+//             if(array[i] == item)
+//             {
+//                 flag = true;
+//                 break;
+//             }
+//             count++;
+//         }
+
+//         if(flag)
+//         {
+//             array[i] = small[count];
+//         }
+//     }
+//     return array;
+// }
+
 // void PrintResult(bool flag)
 // {
 //     if(flag)
@@ -288,61 +315,61 @@ Console.Clear();
 // Console.WriteLine("Введённое значение полиндром?");
 // PrintResult(CheckPolyndrom(ChangeFromBigToSmall(FromStringToArray(word))));
 
-string[] SplitString(string input)
-{
-    string[] answer = new string[CountString(input)];
-    int count = 0;
-    string result = "";
-    for(int i = 0; i < input.Length; i++)
-    {
-        if(input[i] == ' ')
-        {
-            answer[count] = result;
-            result = "";
-            count++;
-        }
-        else
-        {
-            result += input[i];
-        }
+// string[] SplitString(string input)
+// {
+//     string[] answer = new string[CountString(input)];
+//     int count = 0;
+//     string result = "";
+//     for(int i = 0; i < input.Length; i++)
+//     {
+//         if(input[i] == ' ')
+//         {
+//             answer[count] = result;
+//             result = "";
+//             count++;
+//         }
+//         else
+//         {
+//             result += input[i];
+//         }
 
-    }
-    answer[count] = result;
-    return answer;
-}
+//     }
+//     answer[count] = result;
+//     return answer;
+// }
 
-int CountString(string input)
-{
-    int count = 1;
-    for (int i = 0; i < input.Length; i++)
-    {
-        if (input[i] == ' ')
-        {
-            count++;
-        }
-    }
-    return count;
-}
+// int CountString(string input)
+// {
+//     int count = 1;
+//     for (int i = 0; i < input.Length; i++)
+//     {
+//         if (input[i] == ' ')
+//         {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
 
-string[] RevertsSentence(string[] array)
-{
-    for(int i = 0; i < array.Length / 2; i++)
-    {
-        (array[array.Length - 1 - i], array[i]) = (array[i], array[array.Length - 1 - i]);
-    }
-    return array;
-}
+// string[] RevertsSentence(string[] array)
+// {
+//     for(int i = 0; i < array.Length / 2; i++)
+//     {
+//         (array[array.Length - 1 - i], array[i]) = (array[i], array[array.Length - 1 - i]);
+//     }
+//     return array;
+// }
 
-void PrintArray(string[] array)
-{
-    foreach(string item in array)
-    {
-        Console.Write($"{item} ");
-    }
-}
+// void PrintArray(string[] array)
+// {
+//     foreach(string item in array)
+//     {
+//         Console.Write($"{item} ");
+//     }
+// }
 
 
-Console.WriteLine("Введите введите предложение");
-string sentence = Console.ReadLine()!;
-Console.WriteLine("Первёрнутое предложение:");
-PrintArray(RevertsSentence(SplitString(sentence)));
+// Console.WriteLine("Введите введите предложение");
+// string sentence = Console.ReadLine()!;
+// Console.WriteLine("Первёрнутое предложение:");
+// PrintArray(RevertsSentence(SplitString(sentence)));
