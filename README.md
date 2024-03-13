@@ -1,0 +1,8 @@
+# Знакомство с языками программирования (семинары)
+## [Урок 1. Введение](https://github.com/AgazadeAV/Znakomstvo-s-yazikami-programmirovaniya-seminari/tree/main/Seminar_01 "Урок 1. Введение")
+## [Урок 2. Простые Алгоритмы](https://github.com/AgazadeAV/Znakomstvo-s-yazikami-programmirovaniya-seminari/tree/main/Seminar_02 "Урок 2. Простые Алгоритмы")
+## [Урок 3. Массивы](https://github.com/AgazadeAV/Znakomstvo-s-yazikami-programmirovaniya-seminari/tree/main/Seminar_03 "Урок 3. Массивы")
+## [Урок 4. Функции](https://github.com/AgazadeAV/Znakomstvo-s-yazikami-programmirovaniya-seminari/tree/main/Seminar_04 "Урок 4. Функции")
+## [Урок 5. Двумерные Массивы](https://github.com/AgazadeAV/Znakomstvo-s-yazikami-programmirovaniya-seminari/tree/main/Seminar_05 "Урок 5. Двумерные Массивы")
+## [Урок 6. Массивы и строки](https://github.com/AgazadeAV/Znakomstvo-s-yazikami-programmirovaniya-seminari/tree/main/Seminar_06 "Урок 6. Массивы и строки")
+## [Урок 7. Рекурсия](https://github.com/AgazadeAV/Znakomstvo-s-yazikami-programmirovaniya-seminari/tree/main/Seminar_07 "Урок 7. Рекурсия")
