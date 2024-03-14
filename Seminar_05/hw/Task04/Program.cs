@@ -30,60 +30,47 @@ void Show2dArray(int[,] array)
     }
 }
 
-int[,] SwapElementsCol(int[,] array)
+int[] MinElementCoordinates(int[,] array)
 {
     int min = array[0, 0];
-    int min_col = 0;
+    int[] min_coordinates = new int[2];
 
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for(int j = 0; j < array.GetLength(1); j++)
         {
-            if (array[i, j] < min)
+            if(array[i, j] < min)
             {
                 min = array[i, j];
-                min_col = j;
+                min_coordinates[0] = i;
+                min_coordinates[1] = j;
             }
         }
     }
 
-    for (int i = 0; i < array.GetLength(0); i++)
+    return min_coordinates;
+}
+
+int[,] SwapElementsRow(int[,] array)
+{
+    for (int i = MinElementCoordinates(array)[0]; i < array.GetLength(0) - 1; i++)
     {
-        for (int j = min_col; j < array.GetLength(1) - 1; j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            int temp = array[i, j];
-            array[i, j] = array[i, j + 1];
-            array[i, j + 1] = temp;
+            (array[i + 1, j], array[i, j]) = (array[i, j], array[i + 1, j]);
         }
     }
 
     return array;
 }
 
-int[,] SwapElementsRow(int[,] array)
+int[,] SwapElementsCol(int[,] array)
 {
-    int min = array[0, 0];
-    int min_row = 0;
-
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = MinElementCoordinates(array)[1]; j < array.GetLength(1) - 1; j++)
         {
-            if (array[i, j] < min)
-            {
-                min = array[i, j];
-                min_row = i;
-            }
-        }
-    }
-
-    for (int i = min_row; i < array.GetLength(0) - 1; i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            int temp = array[i, j];
-            array[i, j] = array[i + 1, j];
-            array[i + 1, j] = temp;
+            (array[i, j + 1], array[i, j]) = (array[i, j], array[i, j + 1]);
         }
     }
 
